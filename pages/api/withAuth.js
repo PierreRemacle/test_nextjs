@@ -25,7 +25,7 @@ const withAuth = (WrappedComponent) => {
     componentDidMount() {
       const token = localStorage.getItem('token');
       if (!token) {
-        Router.push('/login');
+        Router.push('/posts/login');
       }
     }
   
