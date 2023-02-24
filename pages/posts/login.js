@@ -17,7 +17,7 @@ const Login = () => {
 
     let config = {
       method: 'post',
-      url: `../api/login`,
+      url: `/api/login`,
       headers: {
         'Content-Type': 'application/json',
       },
