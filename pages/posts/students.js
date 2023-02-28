@@ -5,21 +5,23 @@ import Link from 'next/link';
 import styles from '../../components/layout.module.css';
 import { useRouter } from 'next/router';
 import withAuth from '../api/withAuth';
+import Students from '/api/api_students';
+import course from "/api/api_course";
 
 
-const fetchData = () => axios.get('/api/api_students').then(response => response.data.data);
+const fetchData = () => axios.get(Students).then(response => response.data.data);
 
 
 const updateData = async (values) => {
-  await axios.put('/api/api_students', values);
-  const updatedData = await axios.get('/api/api_students');
+  await axios.put(Students, values);
+  const updatedData = await axios.get(Students);
 
   return updatedData.data.data;
 };
 const delData = async (values) => {
 
-    await axios.delete("/api/api_students", { data: values });
-  const updatedData = await axios.get('/api/api_students');
+    await axios.delete(Students, { data: values });
+  const updatedData = await axios.get(Students);
 
 
   return updatedData.data.data;
@@ -37,14 +39,14 @@ const createData = async () => {
           text: "",
         },
       ];
-    await axios.post("/api/api_students", newElement);
-    const updatedData = await axios.get("/api/api_students");
+    await axios.post(Students, newElement);
+    const updatedData = await axios.get(Students);
   
     return updatedData.data.data;
   };
   const createNewcourse = async (values , coursevalues) => {
 
-    await axios.post("/api/api_course", {...values, ...coursevalues});
+    await axios.post(course, {...values, ...coursevalues});
     
   };
 

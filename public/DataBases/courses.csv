@@ -7,8 +7,8 @@ id,firstname,lastname,year,date,subject,paid
 1675605665930,arthur gros,azea,5eme,2023-02-16,a,false
 1675605695624,arthur gros,azea,5eme,2023-02-09,a,false
 1675605707871,arthur gros,azea,5eme,,,false
-1675605768363,arthur gros,azea,5eme,2023-02-09,a,false
-1675614364557,arthur gros,azea,5eme,2023-02-07,équation du second degré,false
+1675605768363,arthur gros,azea,5eme,2023-02-09,a,true
+1675614364557,arthur gros,azea,5eme,2023-02-07,équation du second degré,true
 1675614838038,arthur gros,azea,5eme,2023-02-20,ceci est un très très long sujet test pour voir ce qu'il se passe si c vraiment long,false
 1675616270126,steph,waeza,3eme,2023-02-11,équation second degré,false
 1675680018352,jf,dad,6eme,2023-02-11,science mes couilles,false
@@ -17,3 +17,6 @@ id,firstname,lastname,year,date,subject,paid
 1675788795149,a,a,3eme,2023-02-11,équation,true
 1675791747393,aaaaa,a,5eme,2023-02-11,eza,true
 1676051335945,aaaaa,a,5eme,2023-02-18,equatoin,true
+1677604856186,a,nico,4eme,2023-03-04,équation,true
+1677607062980,a,a,4eme,2023-03-04,a,false
+1677607092179,bite,bite,5eme,2023-02-28,fellation,true

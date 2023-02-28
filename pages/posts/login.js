@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import Router from 'next/router';
+import login from '../api/login';
 
 
 
@@ -17,7 +18,7 @@ const Login = () => {
 
     let config = {
       method: 'post',
-      url: `/api/login`,
+      url: login,
       headers: {
         'Content-Type': 'application/json',
       },

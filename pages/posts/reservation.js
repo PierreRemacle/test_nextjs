@@ -9,7 +9,7 @@ import { useForm } from 'react-hook-form';
 import styles from '../../components/layout.module.css';
 import Link from 'next/link';
 import AuthenticatedComponent from '../api/AuthenticatedComponent';
-
+import form from '../api/form';
 
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
   async function onSubmitForm(values) {
     let config = {
       method: 'post',
-      url: `/api/form`,
+      url: form,
       headers: {
         'Content-Type': 'application/json',
       },

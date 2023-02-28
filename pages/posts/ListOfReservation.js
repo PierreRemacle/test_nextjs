@@ -7,6 +7,7 @@ import axios from 'axios';
 import Link from 'next/link';
 import styles from '../../components/layout.module.css';
 import withAuth from '../api/withAuth';
+import course from '../api/api_course';
 
 
 const FilteringTable = () => {
@@ -23,8 +24,8 @@ const FilteringTable = () => {
 
     values.paid = values.paid == "false"
     
-    await axios.put('/api/api_course', values);
-    const updatedData = await axios.get('/api/api_course');
+    await axios.put(course, values);
+    const updatedData = await axios.get(course);
 
     setData(updatedData.data.data)
 
@@ -34,7 +35,7 @@ const FilteringTable = () => {
     const fetchData = async () => {  
       let config = {
       method: 'GET',
-      url: `/api/api_course`,
+      url: course,
       headers: {
         'Content-Type': 'application/json',
       },
