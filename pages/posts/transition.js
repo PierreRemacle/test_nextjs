@@ -5,25 +5,26 @@ import axios from 'axios';
 import Link from 'next/link';
 import styles from '../../components/layout.module.css';
 import withAuth from '../api/withAuth';
-import form from '/api/form';
-import student from "/api/api_students";
 
 
 const fetchData = async () => {
-  const response = await axios.get(form);
+  const response = await axios.get('/api/form');
   return response.data.data;
 };
 
 const updateData = async (values) => {
-  await axios.put(form, values);
-  const updatedData = await axios.get(form);
+  await axios.put('/api/form', values);
+  const updatedData = await axios.get('/api/form');
 
   return updatedData.data.data;
 };
 const delData = async (values) => {
-    await axios.delete(form, { data: values });
-  const updatedData = await axios.get(form);
-
+    console.log("del")
+    console.log(values)
+    await axios.delete("/api/form", { data: values });
+  const updatedData = await axios.get('/api/form');
+  console.log("updatedData")
+  console.log(updatedData)
 
   return updatedData.data.data;
 };
@@ -39,15 +40,15 @@ const createData = async () => {
           text: "",
         },
       ];
-    await axios.post(form, newElement);
-    const updatedData = await axios.get(form);
+    await axios.post("/api/form", newElement);
+    const updatedData = await axios.get("/api/form");
   
     return updatedData.data.data;
   };
 
   const createNewStudent = async (values) => {
 
-    await axios.post(student, values);
+    await axios.post("/api/api_students", values);
     
   };
 
