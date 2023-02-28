@@ -10,9 +10,14 @@ import {
     faChalkboardTeacher,
     faMoneyBill
   } from "@fortawesome/free-solid-svg-icons";
-  import {
-    faFacebook
-  } from "@fortawesome/free-brands-svg-icons";
+import {
+faFacebook
+} from "@fortawesome/free-brands-svg-icons";
+// import './api/api_course';
+// import './api/api_students';
+// import './api/AuthenticatedComponent';
+// import './api/form';
+// import './api/login';
 
 export default function FirstPost() {
     return (
